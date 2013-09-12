@@ -11,6 +11,18 @@ def sum thing
   if thing.empty?
     0
   else
-    thing.each.reduce(:+)
+    thing.reduce(:+)
   end
+end
+
+def multiply *num
+  num.reduce(:*)
+end
+
+def power *num
+  num.reduce { |memo,n| memo ** n }
+end
+
+def factorial num
+  (1..num).reduce(1,:*)
 end
